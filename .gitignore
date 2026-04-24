@@ -34,13 +34,17 @@ bp_decoder_sweep.log
 
 # DFEC experiment generated data/results
 /DFEC_experiment/cpp/run_experiment_cpp
-/DFEC_experiment/data/
+/DFEC_experiment/data/*
+!/DFEC_experiment/data/64-128-4.H
+!/DFEC_experiment/data/64-128-4.gen
+!/DFEC_experiment/data/64-128-4.pchk
 /DFEC_experiment/export/
 /DFEC_experiment/results/
 
 # Replayswap C++ generated outputs
 /replayswap_cpp/run_replayswap_cpp
 /replayswap_cpp/export/
+/replayswap_cpp/vendor/
 
-# Replayswap run outputs
-/replayswap/data/runs/*.csv
+# Replayswap generated data/plots/outputs
+/replayswap/data/
