@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=BP Decoder UI
+Comment=Launch the LDPC belief propagation decoder GUI
+Path=/home/gabiel/Documents/GitHub/BP/LDPC-codes
+Exec=/home/gabiel/Documents/GitHub/BP/LDPC-codes/run_bp_decoder_ui.sh
+Icon=utilities-terminal
+Terminal=false
+Categories=Development;Science;
+StartupNotify=true

@@ -1,0 +1,46 @@
+# Local tooling
+.codex
+.codex/
+imgui.ini
+bp_decoder_sweep.log
+
+# Root build products from `make progs`
+*.o
+/alist-to-pchk
+/decode
+/encode
+/equalize_dfe
+/extract
+/extract_systematic
+/joint_dfec_bp
+/make-gen
+/make-ldpc
+/make-pchk
+/pchk-to-alist
+/print-gen
+/print-pchk
+/rand-src
+/transmit
+/transmit_isi
+/verify
+
+# Temporary GUI and smoke-test artifacts
+/bp_gui_*
+/ex-ldpc36-5000a.*
+/tmp_joint_dfec_smoke/
+
+# GUI build outputs
+/ldpc_gui/build/
+
+# DFEC experiment generated data/results
+/DFEC_experiment/cpp/run_experiment_cpp
+/DFEC_experiment/data/
+/DFEC_experiment/export/
+/DFEC_experiment/results/
+
+# Replayswap C++ generated outputs
+/replayswap_cpp/run_replayswap_cpp
+/replayswap_cpp/export/
+
+# Replayswap run outputs
+/replayswap/data/runs/*.csv
