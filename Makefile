@@ -59,10 +59,17 @@ progs:	modules
 	   enc.o rcode.o rand.o alloc.o intio.o blockio.o open.o -lm -o encode
 	$(COMPILE) transmit.c
 	$(LINK) transmit.o channel.o rand.o open.o -lm -o transmit
+	$(COMPILE) transmit_isi.c
+	$(LINK) transmit_isi.o rand.o open.o -lm -o transmit_isi
+	$(COMPILE) equalize_dfe.c
+	$(LINK) equalize_dfe.o open.o -lm -o equalize_dfe
 	$(COMPILE) decode.c
 	$(LINK) decode.o channel.o mod2sparse.o mod2dense.o mod2convert.o \
 	   enc.o check.o \
 	   rcode.o rand.o alloc.o intio.o blockio.o dec.o open.o -lm -o decode
+	$(COMPILE) joint_dfec_bp.c
+	$(LINK) joint_dfec_bp.o mod2sparse.o mod2dense.o mod2convert.o \
+	   enc.o check.o rcode.o alloc.o intio.o blockio.o dec.o open.o -lm -o joint_dfec_bp
 	$(COMPILE) extract.c
 	$(LINK) extract.o mod2sparse.o mod2dense.o mod2convert.o \
 	   rcode.o alloc.o intio.o blockio.o open.o -lm -o extract
@@ -115,5 +122,5 @@ clean:
 	rm -f	core *.o *.exe ex-*.* test-file \
 		make-pchk alist-to-pchk pchk-to-alist \
 		make-ldpc print-pchk make-gen print-gen \
-		rand-src encode transmit decode extract verify \
+		rand-src encode transmit transmit_isi equalize_dfe decode joint_dfec_bp extract verify \
 		mod2dense-test mod2sparse-test mod2convert-test rand-test extract_systematic
